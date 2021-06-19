@@ -79,17 +79,17 @@ basic guide for javascript document object model manipulation
 
 
 ```bash
-        usage examples:
-            var li = document.getElementsByClassName('name of the class');
-            console.log(li); // gets all the elements of the given tag
-            console.log(li[0]); // gets the first element of the given tag
-            li[0].textContent = 'Hello'; // adds text to the given tag
-            li[0].style.fontWeight = 'bold'; // changes the style of the given tag
-            li.style.backgroundColor = 'green'; // gives error
-            
-            // correct way 
-            for(var i=0; i<li.length ; i++)
-            {
-                li[i].style.backgroundColor = 'green';
-            }
+    usage examples:
+        var li = document.getElementsByClassName('name of the class');
+        console.log(li); // gets all the elements of the given tag
+        console.log(li[0]); // gets the first element of the given tag
+        li[0].textContent = 'Hello'; // adds text to the given tag
+        li[0].style.fontWeight = 'bold'; // changes the style of the given tag
+        li.style.backgroundColor = 'green'; // gives error
+        
+        // correct way 
+        for(var i=0; i<li.length ; i++)
+        {
+            li[i].style.backgroundColor = 'green';
+        }
 ```
