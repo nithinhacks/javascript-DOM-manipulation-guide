@@ -35,7 +35,7 @@ basic guide for javascript document object model manipulation
 | --- | --- |
 | console.log(document.getElementById('name of the ID')) | gets the element with the given ID |
 
-```bash
+```javascript
     usage examples:
         var headertitle = document.getElementById('name of the ID');
         console.log(headertitle); // gets the content within the given ID
@@ -55,7 +55,7 @@ basic guide for javascript document object model manipulation
 | --- | --- |
 | console.log(document.getElementsByClassName('name of the class')) | gets the element with the given classname |
 
-```bash
+```javascript
     usage examples:
         var items = document.getElementsByClassName('name of the class');
         console.log(items); // gets all the elements of the given class
@@ -75,10 +75,10 @@ basic guide for javascript document object model manipulation
 
 | Command | Description |
 | --- | --- |
-| console.log(getElementsByTagName('name of the tag')) | gets the element with the given tag name |
+| console.log(document.getElementsByTagName('name of the tag')) | gets the element with the given tag name |
 
 
-```bash
+```javascript
     usage examples:
         var li = document.getElementsByClassName('name of the class');
         console.log(li); // gets all the elements of the given tag
@@ -91,5 +91,53 @@ basic guide for javascript document object model manipulation
         for(var i=0; i<li.length ; i++)
         {
             li[i].style.backgroundColor = 'green';
+        }
+```
+
+## QUERYSELECTOR
+
+| Command | Description |
+| --- | --- |
+| console.log(document.querySelector('any css selector')) | gets the first css selector given |
+
+
+```javascript
+    usage examples:
+        var header = document.querySelector('#main-header');
+        header.style.borderBottom = 'solid 4px #ccc'; // adds style to given css selector
+
+        var input = document.querySelector('input');
+        input.value = 'Hello World'; 
+
+        var item = document.querySelector('.list-group-item');
+        item.style.color = 'red'; // changes the color of first item in list-group-item class
+
+        var lastItem = document.querySelector('.list-group-item:last-child');
+        lastItem.style.color = 'blue'; // changes the color of the last item in list-group-item class
+
+        var secondItem = document.querySelector('.last-group-item:nth-child(2)');
+        secondItem.style.color = 'coral'; // changes the color of the second item in list-group-item class
+```
+
+## QUERYSELECTORALL
+
+| Command | Description |
+| --- | --- |
+| console.log(document.querySelectorAll('any css selector'))  | gets all the elements of given css selector |
+
+
+```javascript
+    usage examples:
+        var titles = document.querySelectorAll('.title');
+        console.log(titles); // gets all elements with class title
+        titles[0].textContent = 'Hello'; // changes the textcontent of first element with class title
+
+        var odd = document.querySelectorAll('li:nth-child(odd)'); // gets all the odd elements of the given css selector
+        var even = document.querySelectorAll('li:nth-child(even)'); // gets all the even elements of the given css selector 
+
+        for(var i=0; i<odd.length; i++)
+        {
+            odd[i].style.backgroundColor = '#f4f4f4'; // changes the color of all odd elements
+            even[i].style.backgroundColor = '#ccc'; // changes the color of all even elements
         }
 ```
