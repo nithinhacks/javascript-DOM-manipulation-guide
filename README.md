@@ -141,3 +141,27 @@ basic guide for javascript document object model manipulation
             even[i].style.backgroundColor = '#ccc'; // changes the color of all even elements
         }
 ```
+
+## TRAVERSING THE DOM
+
+```javascript
+    var itemList = document.querySelector('#items');
+```
+
+## •parentNode 
+
+```javascript
+    usage examples:
+        console.log(itemList.parentNode); // gets the parent element of the itemList ID
+        itemList.parentNode.style.backgroundColor = '#f4f4f4'; // changes the background color of parent element of itemList ID
+        console.log(itemList.parentNode.parentNode); // gets the parent element of parent element of itemList ID
+```
+
+## •parentElement
+
+```javascript
+    usage examples:
+        console.log(itemList.parentElement); // gets the parent element of the itemList ID
+        itemList.parentElement.style.backgroundColor = '#f4f4f4'; // changes the background color of parent element of itemList ID
+        console.log(itemList.parentElement.parentElement); // gets the parent element of parent element of itemList ID
+```
