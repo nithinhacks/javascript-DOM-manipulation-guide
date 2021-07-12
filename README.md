@@ -165,3 +165,34 @@ basic guide for javascript document object model manipulation
         itemList.parentElement.style.backgroundColor = '#f4f4f4'; // changes the background color of parent element of itemList ID
         console.log(itemList.parentElement.parentElement); // gets the parent element of parent element of itemList ID
 ```
+
+## •childNodes
+
+```javascript
+    usage examples:
+        console.log(itemList.childNodes); // gets all the child elements of itemList ID with line breaks
+```
+
+## •children
+
+```javascript
+    usage examples:
+        console.log(itemList.children); // gets all the children elements of itemList ID
+        console.log(itemList.children[1]); // gets the children element at index 1
+        itemList.children[1].style.backgroundColor = 'yellow'; 
+```
+
+## •firstChild
+
+```javascript
+    usage examples: 
+        console.log(itemList.firstChild); // gets the first child element of itemList ID with line breaks
+```
+
+## •firstElementChild
+
+```javascript
+    usage examples:
+        console.log(itemList.firstElementChild); // gets the first child element of itemList ID
+        itemList.firstElementChild.textContent = 'hello';
+```
